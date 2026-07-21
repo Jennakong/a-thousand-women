@@ -42,3 +42,4 @@ next-env.d.ts
 # Large media files
 /public/videos/
 /public/sounds/
+.vercel

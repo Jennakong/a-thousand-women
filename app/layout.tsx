@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Anton, Nunito } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
-
+import Footer from "@/components/layout/Footer";
 const anton = Anton({
   weight: "400",
   subsets: ["latin"],
@@ -31,6 +31,7 @@ export default function RootLayout({
       <body className={`${anton.variable} ${nunito.variable}`}>
         <Navbar />
         {children}
+          <Footer />
       </body>
     </html>
   );

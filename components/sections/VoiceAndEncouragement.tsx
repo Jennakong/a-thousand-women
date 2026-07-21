@@ -15,11 +15,11 @@ const encouragements = [
     text: "Your voice matters. Your story matters. Your dreams matter. You are worthy of support and opportunity."
   },
   {
-    image: "/images/4(2).jpg",
+    image: "/images/4.jpg",
     text: "No woman should have to choose between meeting her basic needs and pursuing her goals. Dignity should never be a privilege."
   },
   {
-    image: "/images/5(2).jpg",
+    image: "/images/5.jpg",
     text: "The challenges you face today are not the limits of what you can become. Your future is still full of possibilities."
   },
   {
@@ -62,7 +62,7 @@ const [message, setMessage] = useState(
 
   return (
     <section className="voice-section">
-
+ <div className="container">
       <div className="voice-heading">
         <span className="section-label">
           YOUR VOICE MATTERS
@@ -137,7 +137,7 @@ const [message, setMessage] = useState(
 
 </div>
       </div>
-
+</div>
     </section>
   );
 }
