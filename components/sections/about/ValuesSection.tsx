@@ -89,18 +89,7 @@ export default function ValuesSection() {
 
 
 
-        <Reveal>
-
-          <div className="mission-quote">
-
-            <p>
-              “When women are supported, families grow stronger,
-              communities transform, and generations are empowered.”
-            </p>
-
-          </div>
-
-        </Reveal>
+       
 
 
       </Container>

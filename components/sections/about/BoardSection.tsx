@@ -8,7 +8,7 @@ const boardMembers = [
  
 
   {
-    name: "Board Member Name",
+    name: "Anderson Egbe",
     role: "Board Member",
     image: "/images/board-member.jpg",
     description:
