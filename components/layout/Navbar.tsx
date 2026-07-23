@@ -33,7 +33,6 @@ export default function Navbar() {
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
           <Link href="/initiatives">Initiatives</Link>
-          <Link href="/impact">Impact</Link>
           <Link href="/knowledge-hub">
             Knowledge Hub
           </Link>

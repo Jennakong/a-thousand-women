@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+
 type ImpactStory = {
   title: string;
   number: string;
@@ -10,19 +11,22 @@ type ImpactStory = {
   image?: string;
   images?: string[];
 };
-const stories: ImpactStory[] = [
- {
-  title: "Education",
-  number: "1,000+",
-  label: "Girls supported",
-  text: "Creating opportunities for girls to learn, grow, and lead.",
-  images: [
-    "/images/girls-education.jpeg",
-    "/images/girls-education-2.png",
-    "/images/outreach.jpeg",
 
-  ],
-},
+
+const stories: ImpactStory[] = [
+
+  {
+    title: "Education",
+    number: "1,000+",
+    label: "Girls supported",
+    text: "Creating opportunities for girls to learn, grow, and lead.",
+    images: [
+      "/images/girls-education.jpeg",
+      "/images/girls-education-2.png",
+      "/images/outreach.jpeg",
+    ],
+  },
+
 
   {
     title: "Menstrual Equity",
@@ -32,6 +36,7 @@ const stories: ImpactStory[] = [
     image: "/images/menstrual-equity.jpeg",
   },
 
+
   {
     title: "Community Health",
     number: "700+",
@@ -40,27 +45,32 @@ const stories: ImpactStory[] = [
     image: "/images/medical-outreach.jpeg",
   },
 
-{
-  title: "Food Security",
-  number: "250+",
-  label: "Families supported",
-  text: "Providing dignity and support during difficult times.",
-  images: [
-    "/images/food-donation.jpeg",
-    "/images/food-donation-1.jpeg",
-    "/images/food-donation-2.jpeg",
-  ],
-},
+
+  {
+    title: "Food Security",
+    number: "500+",
+    label: "Families supported",
+    text: "Providing dignity and support during difficult times.",
+    images: [
+      "/images/food-donation.jpeg",
+      "/images/food-donation-2.jpeg",
+    ],
+  },
+
 ];
 
 
+
 export default function ImpactStories() {
+
 
   const [active, setActive] = useState(0);
 
   const [imageIndex, setImageIndex] = useState(0);
 
+
   const story = stories[active];
+
 
 
   useEffect(() => {
@@ -71,19 +81,37 @@ export default function ImpactStories() {
     if (!story.images) return;
 
 
+    // Preload images for smooth transition
+    story.images.forEach((src) => {
+
+      const img = new window.Image();
+
+      img.src = src;
+
+    });
+
+
     const timer = setInterval(() => {
 
-      setImageIndex((prev) =>
-        (prev + 1) % story.images!.length
+      setImageIndex((previous) =>
+        (previous + 1) % story.images!.length
       );
 
-    }, 2000);
+    }, 3000);
+
 
 
     return () => clearInterval(timer);
 
 
   }, [story]);
+
+
+
+  const currentImage = story.images
+    ? story.images[imageIndex]
+    : story.image;
+
 
 
   return (
@@ -93,44 +121,41 @@ export default function ImpactStories() {
 
       <div className="impact-heading">
 
-        <span>
-          OUR IMPACT
-        </span>
-
         <h2>
           Every Number Has A Face
         </h2>
+
 
         <p>
           Behind every statistic is someone
           whose life changed.
         </p>
 
+
       </div>
+
 
 
 
       <div className="impact-media">
 
 
-       <Image
+        <Image
 
-key={story.images?.[imageIndex] || story.image}
+          src={
+            currentImage || "/images/girls-education.png"
+          }
 
-src={
-  story.images
-    ? story.images[imageIndex]
-    : story.image || "/images/girls-education.png"
-}
+          alt={story.title}
 
-  alt={story.title}
+          fill
 
-  fill
+          priority
 
-  className="impact-image"
+          className="impact-image"
 
-/>
-const [imageIndex, setImageIndex] = useState(0);
+        />
+
 
 
         <div className="impact-overlay">
@@ -163,23 +188,30 @@ const [imageIndex, setImageIndex] = useState(0);
 
 
 
+
+
       <div className="impact-tabs">
 
 
-        {stories.map((item,index)=>(
+        {stories.map((item, index) => (
+
 
           <button
 
             key={item.title}
 
-            onMouseEnter={() =>
-              setActive(index)
-            }
+            onMouseEnter={() => {
+
+              setActive(index);
+
+              setImageIndex(0);
+
+            }}
 
             className={
               active === index
-              ? "active"
-              : ""
+                ? "active"
+                : ""
             }
 
           >
@@ -188,13 +220,16 @@ const [imageIndex, setImageIndex] = useState(0);
 
           </button>
 
+
         ))}
 
 
       </div>
 
 
+
     </section>
 
   );
+
 }

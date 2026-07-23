@@ -1,5 +1,7 @@
 "use client";
+
 import { useState } from "react";
+import ContactForm from "@/components/forms/ContactForm";
 
 const encouragements = [
   {
@@ -43,101 +45,80 @@ const encouragements = [
     text: "A brighter future begins when we choose compassion, equity, and action. Every woman deserves the chance to rise."
   }
 ];
+
 export default function VoiceAndEncouragement() {
-
-const [message, setMessage] = useState(
-  encouragements[0]
-);
-
+  const [message, setMessage] = useState(encouragements[0]);
 
   function receiveEncouragement() {
-
-    const random =
-      Math.floor(Math.random() * encouragements.length);
-
+    const random = Math.floor(Math.random() * encouragements.length);
     setMessage(encouragements[random]);
-
   }
-
 
   return (
     <section className="voice-section">
- <div className="container">
-      <div className="voice-heading">
-        <span className="section-label">
-          YOUR VOICE MATTERS
-        </span>
+      <div className="container">
 
-        <h2>
-          Every story matters.
-          Every voice creates change.
-        </h2>
+        <div className="voice-heading">
+          <span className="section-label">
+            YOUR VOICE MATTERS
+          </span>
 
-        <p>
-          Whether you want to share your experience,
-          ask for support, or simply tell us your story,
-          we are listening.
-        </p>
-      </div>
-
-
-      <div className="voice-container">
-
-        <div className="voice-form-card">
-          <h3>
-            Leave Your Voice
-          </h3>
+          <h2>
+            Every story matters.
+            <br />
+            Every voice creates change.
+          </h2>
 
           <p>
-            Share your experience, ideas,
-            or how we can better support
-            your community.
+            Whether you want to share your experience,
+            ask for support, or simply tell us your story,
+            we are listening.
           </p>
-
-          <input placeholder="Your name (optional)" />
-
-          <input placeholder="Your email (optional)" />
-
-          <textarea placeholder="Share your message..." />
-  <button className="voice-submit-button">
-    Send Message →
-  </button>
-         
         </div>
 
+        <div className="voice-container">
 
-      <div className="encouragement-container">
+          <div className="voice-form-card">
 
-  <h3>
-   Words For Today
-  </h3>
+            <ContactForm
+              title="Leave Your Voice"
+              description="Share your experience, ideas, or tell us how we can better support your community."
+              buttonText="Send Message"
+            />
 
-<div
-  className="encouragement-card"
-  style={{
-    backgroundImage: `url(${message.image})`
-  }}
->
+          </div>
 
-  <div className="encouragement-overlay">
+          <div className="encouragement-container">
 
-    <p>
-      “{message.text}”
-    </p>
+            <h3>
+              Words For Today
+            </h3>
 
-  </div>
+            <div
+              className="encouragement-card"
+              style={{
+                backgroundImage: `url(${message.image})`,
+              }}
+            >
+              <div className="encouragement-overlay">
+                <p>
+                  “{message.text}”
+                </p>
+              </div>
+            </div>
 
-</div>
+            <button
+              className="encouragement-button"
+              onClick={receiveEncouragement}
+            >
+              Click Here for a Message
+            </button>
 
-  <button 
-  className="encouragement-button"
-  onClick={receiveEncouragement}>
-    Click Here for a Message
-  </button>
+          </div>
 
-</div>
+        </div>
+
       </div>
-</div>
     </section>
   );
 }

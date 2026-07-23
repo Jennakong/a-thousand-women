@@ -68,18 +68,36 @@ export default function Footer() {
           </div>
 
 
-          <div>
-            <h3>Stay Updated</h3>
+         <div className="footer-newsletter">
 
-            <p>
-              Receive updates from our work.
-            </p>
+  <h3>
+    Stay Updated
+  </h3>
 
-            <input
-              placeholder="Your email address"
-            />
+  <p>
+    Receive updates from our work.
+  </p>
 
-          </div>
+
+  <form className="footer-newsletter-form">
+
+    <input
+      type="email"
+      name="email"
+      placeholder="Your email address"
+      required
+    />
+
+
+    <button
+      type="submit"
+    >
+      Join Our Community
+    </button>
+
+  </form>
+
+</div>
 
         </div>
 

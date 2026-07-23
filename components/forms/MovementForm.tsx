@@ -1,5 +1,7 @@
 "use client";
 
+import { useForm, ValidationError } from "@formspree/react";
+
 interface MovementFormProps {
   type: "donate" | "volunteer" | "partner" | "advocate";
 }
@@ -10,7 +12,7 @@ const content = {
     title: "Support a Girl",
     description:
       "Your generosity helps provide menstrual products, education, healthcare and opportunities for women and girls across Africa.",
-    button: "Donate"
+    button: "Donate",
   },
 
   volunteer: {
@@ -18,7 +20,7 @@ const content = {
     title: "Volunteer With Us",
     description:
       "Join our growing community of volunteers and help us create meaningful change.",
-    button: "Apply to Volunteer"
+    button: "Apply to Volunteer",
   },
 
   partner: {
@@ -26,7 +28,7 @@ const content = {
     title: "Partner With Us",
     description:
       "Collaborate with A Thousand Women to expand opportunities for women and girls.",
-    button: "Become a Partner"
+    button: "Become a Partner",
   },
 
   advocate: {
@@ -34,8 +36,8 @@ const content = {
     title: "Become an Advocate",
     description:
       "Use your voice to inspire change and champion menstrual equity.",
-    button: "Join the Movement"
-  }
+    button: "Join the Movement",
+  },
 };
 
 
@@ -43,12 +45,33 @@ export default function MovementForm({
   type,
 }: MovementFormProps) {
 
+  const [state, handleSubmit] = useForm("mgogzdrd");
+
   const form = content[type];
+
+
+  if (state.succeeded) {
+    return (
+      <div className="movement-success">
+
+        <h3>
+          Thank you for joining the movement!
+        </h3>
+
+        <p>
+          We've received your submission and our team
+          will contact you soon.
+        </p>
+
+      </div>
+    );
+  }
 
 
   return (
 
     <div className="movement-form-wrapper">
+
 
       <span className="movement-form-badge">
         {form.badge}
@@ -67,17 +90,10 @@ export default function MovementForm({
 
 
       <form
-
         className="movement-form"
-
-        action="https://formspree.io/f/meeyzpng"
-
-        method="POST"
-
+        onSubmit={handleSubmit}
       >
 
-
-        {/* Form Identification */}
 
         <input
           type="hidden"
@@ -94,9 +110,6 @@ export default function MovementForm({
 
 
 
-        {/* Shared Fields */}
-
-
         <input
           type="text"
           name="name"
@@ -110,6 +123,13 @@ export default function MovementForm({
           name="email"
           placeholder="Email Address"
           required
+        />
+
+
+        <ValidationError
+          prefix="Email"
+          field="email"
+          errors={state.errors}
         />
 
 
@@ -129,10 +149,7 @@ export default function MovementForm({
 
 
 
-        {/* Donate */}
-
         {type === "donate" && (
-
           <>
 
             <input
@@ -162,15 +179,11 @@ export default function MovementForm({
             </select>
 
           </>
-
         )}
 
 
 
-        {/* Volunteer */}
-
         {type === "volunteer" && (
-
           <>
 
             <input
@@ -187,9 +200,7 @@ export default function MovementForm({
             />
 
 
-            <select
-              name="availability"
-            >
+            <select name="availability">
 
               <option value="">
                 Availability
@@ -210,15 +221,11 @@ export default function MovementForm({
             </select>
 
           </>
-
         )}
 
 
 
-        {/* Partner */}
-
         {type === "partner" && (
-
           <>
 
             <input
@@ -235,9 +242,7 @@ export default function MovementForm({
             />
 
 
-            <select
-              name="partnership_type"
-            >
+            <select name="partnership_type">
 
               <option value="">
                 Partnership Type
@@ -266,18 +271,13 @@ export default function MovementForm({
             </select>
 
           </>
-
         )}
 
 
 
-        {/* Advocate */}
-
         {type === "advocate" && (
 
-          <select
-            name="advocacy_interest"
-          >
+          <select name="advocacy_interest">
 
             <option value="">
               How would you like to help?
@@ -305,48 +305,36 @@ export default function MovementForm({
 
 
 
-        {/* Message */}
-
         <textarea
-
           name="message"
-
           rows={5}
-
           placeholder={
-
             type === "donate"
-
               ? "Leave us a message (optional)"
-
               : type === "partner"
-
               ? "Tell us about your organisation"
-
               : type === "volunteer"
-
               ? "Why would you like to volunteer?"
-
               : "Tell us how you'd like to advocate"
-
           }
-
         />
 
 
 
+        <ValidationError errors={state.errors} />
+
+
         <button
-
           type="submit"
-
           className="movement-submit-button"
-
+          disabled={state.submitting}
         >
 
-          {form.button}
+          {state.submitting
+            ? "Sending..."
+            : form.button}
 
         </button>
-
 
 
       </form>
@@ -355,5 +343,4 @@ export default function MovementForm({
     </div>
 
   );
-
 }

@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { Anton, Nunito } from "next/font/google";
+
 import "./globals.css";
+
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+
 const anton = Anton({
   weight: "400",
   subsets: ["latin"],
@@ -16,7 +19,7 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: "A Thousand Women",
+
   description:
     "Empowering women and girls through education, empowerment, and advocacy.",
 };
@@ -30,8 +33,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${anton.variable} ${nunito.variable}`}>
         <Navbar />
+
         {children}
-          <Footer />
+
+        <Footer />
       </body>
     </html>
   );

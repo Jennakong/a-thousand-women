@@ -50,10 +50,8 @@ export default function LuwaComingSoon() {
             <Reveal>
 
               <p className="luwa-text">
-
                 You'll never have to worry about
                 your period alone again.
-
               </p>
 
             </Reveal>
@@ -63,13 +61,10 @@ export default function LuwaComingSoon() {
             <Reveal>
 
               <p className="luwa-description">
-
                 A new menstrual equity platform
                 connecting girls and women to
-                trusted information,
-                essential products,
-                and a supportive community.
-
+                trusted information, essential
+                products, and a supportive community.
               </p>
 
             </Reveal>
@@ -80,10 +75,14 @@ export default function LuwaComingSoon() {
 
               <button
                 className="luwa-button"
-                onClick={() => setShowForm(!showForm)}
+                onClick={() => setShowForm((prev) => !prev)}
+                aria-expanded={showForm}
               >
 
-                Notify Me
+                {showForm
+                  ? "Close"
+                  : "Join LUWA Waitlist"
+                }
 
               </button>
 
@@ -95,15 +94,11 @@ export default function LuwaComingSoon() {
 
               <Reveal>
 
-                <ContactForm
+                <div className="luwa-form-card">
 
-                  title="Stay Updated"
+                  <ContactForm variant="luwa" />
 
-                  description="Leave your details and we will notify you when LUWA launches."
-
-                  buttonText="Notify Me"
-
-                />
+                </div>
 
               </Reveal>
 
@@ -115,6 +110,7 @@ export default function LuwaComingSoon() {
 
 
 
+
           {/* RIGHT */}
 
           <Reveal>
@@ -122,19 +118,12 @@ export default function LuwaComingSoon() {
             <div className="luwa-phone">
 
               <Image
-
                 src="/images/luwa-mockup.png"
-
                 alt="LUWA App Preview"
-
                 width={360}
-
                 height={720}
-
                 priority
-
                 className="phone-image"
-
               />
 
             </div>

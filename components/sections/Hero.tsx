@@ -35,16 +35,16 @@ export default function Hero() {
 
           <div className="hero-buttons">
 
-            <Button href="/get-involved">
-              Join Our Movement
-            </Button>
+            <Button href="/#get-involved">
+  Join Our Movement
+</Button>
 
 
             <Button
-              href="/impact"
+              href="/initiatives"
               variant="secondary"
             >
-              Explore Our Impact
+              Explore Our Initiatives
             </Button>
 
 

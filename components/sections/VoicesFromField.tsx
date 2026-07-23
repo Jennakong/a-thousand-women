@@ -74,11 +74,7 @@ export default function VoicesFromField() {
 
       <div className="section-heading">
 
-        <span className="section-label">
-          STORIES OF IMPACT
-        </span>
-
-
+    
         <h2 className="section-title">
   Real Stories. Real Change.
         </h2>
