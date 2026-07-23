@@ -3979,7 +3979,8 @@ margin-top:40px;
 
 .mission-section{
 
-  padding:120px 0;
+   padding-top: 50px;
+  padding-bottom: 50px;
 
   background:
   radial-gradient(circle at top right,
@@ -4822,7 +4823,8 @@ html {
 
 .values-section {
 
-  margin-top:80px;
+   padding-top: 50px;
+  padding-bottom: 50px;
   text-align:center;
 
 }
@@ -4873,10 +4875,38 @@ html {
 
 .board-section {
 
-  padding:100px 0;
+  padding-top: 50px;
+  padding-bottom: 50px;
 
 }
+/* Board Section */
 
+.board-section {
+  background: var(--atw-cream);
+  padding: 70px 0;
+  position: relative;
+}
+
+
+/* Gold accent line */
+
+.board-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 5px;
+  background: var(--atw-gold);
+  border-radius: 10px;
+}
+
+
+.board-section h2 {
+  text-align: center;
+  color: var(--atw-green);
+}
 
 
 .about-section-heading {
@@ -4901,13 +4931,18 @@ html {
 
 .board-card {
 
-  background:white;
-  border-radius:30px;
-  padding:25px;
-  text-align:center;
+  background: white;
+  border: 1px solid rgba(220,199,108,0.4);
+  border-radius: 25px;
+  padding: 25px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
 
-  box-shadow:
-  0 15px 40px rgba(0,0,0,.08);
+}
+
+
+.board-card img {
+
+  border-radius: 20px;
 
 }
 
@@ -4955,7 +4990,18 @@ html {
   line-height:1.7;
 
 }
+@media(max-width:768px){
 
+  .board-section {
+    padding: 45px 0;
+  }
+
+
+  .board-card {
+    padding: 20px;
+  }
+
+}
 
 
 /* =========================
@@ -5089,6 +5135,8 @@ html {
   max-width: 700px;
   font-size: 1.2rem;
   line-height: 1.7;
+  margin: 0 auto;
+  text-align: center;
 
 }
 
@@ -5289,12 +5337,49 @@ font-size:1rem;
 }
 
 }
+.about-page section {
+  padding: 60px 0;
+}
+
 @media(max-width:768px){
 
 .about-page section{
 
-padding:70px 0;
+padding:40px 0;
 
 }
 
+}
+/* Leadership Section */
+
+.leadership-section {
+  background: var(--atw-cream);
+  padding: 80px 0;
+  position: relative;
+}
+
+
+/* subtle gold accent */
+
+.leadership-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 5px;
+  background: var(--atw-gold);
+  border-radius: 10px;
+}
+
+
+.leadership-section h2 {
+  text-align: center;
+  color: var(--atw-green);
+}
+
+
+.leadership-section .section-label {
+  color: #D9A441;
 }
