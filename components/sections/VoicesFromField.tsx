@@ -3,28 +3,21 @@
 import { useState } from "react";
 
 const stories = [
-  {
-    title: "School Outreach",
-    video: "/videos/school-outreach-small.mp4",
-    location: "Evwreni, Delta State",
-    programme: "Education Support",
-    quote:
-      "Your support has empowered us and exposed us to new opportunities. The gifts and knowledge we received today will help us become more prepared for our future.",
-    person: "Student Testimonial",
-  },
+{
+  title: "School Outreach",
+  youtube: "https://www.youtube.com/embed/tWd4kZ2pR0o",
+  thumbnail: "/images/videos/school-outreach.jpg",
+  location: "Evwreni, Delta State",
+  programme: "Education Support",
+  quote:
+    "Your support has empowered us and exposed us to new opportunities. The gifts and knowledge we received today will help us become more prepared for our future.",
+  person: "Student Testimonial",
+},
 
-  {
-    title: "Medical Outreach",
-    video: "/videos/medical-outreach-small.mp4",
-    location: "Delta State",
-    programme: "World Health Day Medical Outreach",
-    quote: "",
-    person: "",
-  },
 
   {
     title: "Food Donation",
-    video: "/videos/food-donation-small.mp4",
+youtube: "https://www.youtube.com/embed/hajGDOcZo60",
     location: "Delta State",
     programme: "Community Support",
     quote: "",
@@ -33,30 +26,14 @@ const stories = [
 
   {
     title: "Menstrual Health Talk",
-    video: "/videos/menstrual-talk-small.mp4",
+     youtube: "https://www.youtube.com/embed/tWd4kZ2pR0o",
     location: "Cross River State",
     programme: "Menstrual Health Education",
     quote: "",
     person: "",
   },
 
-  {
-    title: "Education Session",
-    video: "/videos/education-session-small.mp4",
-    location: "Cross River State",
-    programme: "International Day of Education",
-    quote: "",
-    person: "",
-  },
-
-  {
-    title: "Gratitude Message",
-    video: "/videos/gratitude-message-small.mp4",
-    location: "Evwreni, Delta State",
-    programme: "Student Testimonial",
-    quote: "",
-    person: "",
-  },
+  
 ];
 
 
@@ -92,21 +69,14 @@ export default function VoicesFromField() {
       <div className="voices-feature">
 
 
-        <video
-  autoPlay
-  muted
-  loop
-  playsInline
-  controls
+ <iframe
   className="voices-video"
->
-
-          <source
-            src={story.video}
-            type="video/mp4"
-          />
-
-        </video>
+  src={story.youtube}
+  title={story.title}
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerPolicy="strict-origin-when-cross-origin"
+  allowFullScreen
+/>
 
 
 
@@ -181,18 +151,14 @@ export default function VoicesFromField() {
           >
 
 
-            <video
-              muted
-              preload="none"
-              className="voice-thumbnail"
-            >
-
-              <source
-                src={item.video}
-                type="video/mp4"
-              />
-
-            </video>
+           <iframe
+  className="voice-thumbnail"
+  src={item.youtube}
+  title={item.title}
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerPolicy="strict-origin-when-cross-origin"
+  allowFullScreen
+/>
 
 
 

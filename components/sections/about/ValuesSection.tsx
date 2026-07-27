@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Container from "@/components/layout/Container";
 import Reveal from "@/components/animations/Reveal";
 
@@ -8,25 +9,29 @@ export default function ValuesSection() {
     {
       title: "Dignity",
       text:
-        "Every woman and girl deserves access to resources, support, and opportunities that allow her to live with confidence."
+        "Every woman and girl deserves access to resources, support, and opportunities that allow her to live with confidence.",
+      image: "/images/dignity.jpg"
     },
 
     {
       title: "Education",
       text:
-        "We believe knowledge creates opportunities and empowers women and girls to shape their futures."
+        "We believe knowledge creates opportunities and empowers women and girls to shape their futures.",
+      image: "/images/education.jpg"
     },
 
     {
       title: "Empowerment",
       text:
-        "We support women and girls to overcome barriers, discover their potential, and become leaders in their communities."
+        "We support women and girls to overcome barriers, discover their potential, and become leaders in their communities.",
+      image: "/images/empowerment.jpg"
     },
 
     {
       title: "Advocacy",
       text:
-        "We champion awareness, equity, and solutions that address challenges affecting women and girls."
+        "We champion awareness, equity, and solutions that address challenges affecting women and girls.",
+      image: "/images/advocacy.jpg"
     }
   ];
 
@@ -70,14 +75,28 @@ export default function ValuesSection() {
 
               <article className="value-card">
 
-                <h3>
-                  {value.title}
-                </h3>
+                <Image
+                  src={value.image}
+                  alt={value.title}
+                  width={500}
+                  height={400}
+                  className="value-image"
+                />
 
 
-                <p>
-                  {value.text}
-                </p>
+                <div className="value-content">
+
+                  <h3>
+                    {value.title}
+                  </h3>
+
+
+                  <p>
+                    {value.text}
+                  </p>
+
+                </div>
+
 
               </article>
 
@@ -86,10 +105,6 @@ export default function ValuesSection() {
           ))}
 
         </div>
-
-
-
-       
 
 
       </Container>

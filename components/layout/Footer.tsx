@@ -43,9 +43,7 @@ export default function Footer() {
               Our Programs
             </Link>
 
-            <Link href="/impact">
-              Impact
-            </Link>
+          
 
           </div>
 
@@ -53,15 +51,15 @@ export default function Footer() {
           <div>
             <h3>Connect</h3>
 
-            <a href="#">
+            <a href="https://www.instagram.com/athousandwomen/">
               Instagram
             </a>
 
-            <a href="#">
+            <a href="https://www.facebook.com/athousandwomen/">
               Facebook
             </a>
 
-            <a href="#">
+            <a href="https://www.linkedin.com/company/a-thousand-women/">
               LinkedIn
             </a>
 
