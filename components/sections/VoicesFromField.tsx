@@ -3,16 +3,14 @@
 import { useState } from "react";
 
 const stories = [
-{
-  title: "School Outreach",
-  youtube: "https://www.youtube.com/embed/tWd4kZ2pR0o",
-  thumbnail: "/images/videos/school-outreach.jpg",
-  location: "Evwreni, Delta State",
-  programme: "Education Support",
-  quote:
-    "Your support has empowered us and exposed us to new opportunities. The gifts and knowledge we received today will help us become more prepared for our future.",
-  person: "Student Testimonial",
-},
+ {
+    title: "Menstrual Health Talk",
+     youtube: "https://www.youtube.com/embed/Qk5WQRueQyQ",
+    location: "Cross River State",
+    programme: "Menstrual Health Education",
+    quote: "",
+    person: "",
+  },
 
 
   {
@@ -24,15 +22,16 @@ youtube: "https://www.youtube.com/embed/hajGDOcZo60",
     person: "",
   },
 
-  {
-    title: "Menstrual Health Talk",
-     youtube: "https://www.youtube.com/embed/tWd4kZ2pR0o",
-    location: "Cross River State",
-    programme: "Menstrual Health Education",
-    quote: "",
-    person: "",
-  },
-
+ {
+  title: "School Outreach",
+  youtube: "https://www.youtube.com/embed/tWd4kZ2pR0o",
+  thumbnail: "/images/videos/school-outreach.jpg",
+  location: "Evwreni, Delta State",
+  programme: "Education Support",
+  quote:
+    "Your support has empowered us and exposed us to new opportunities. The gifts and knowledge we received today will help us become more prepared for our future.",
+  person: "Student Testimonial",
+},
   
 ];
 
