@@ -2992,7 +2992,7 @@ color:#555;
 
 .impact-stories {
   padding: 100px 0;
-  background: var(--atw-cream);
+  background: color(srgb rgba(12, 230, 8, 0.368) green rgb(248, 248, 249));
   overflow: hidden;
 }
 
