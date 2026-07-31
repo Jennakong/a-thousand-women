@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function KnowledgeHub() {
 
   const resources = [
@@ -5,19 +6,22 @@ export default function KnowledgeHub() {
       type: "REPORT",
       title: "State of Menstrual Equity in Africa",
       text: "Exploring the challenges affecting access to menstrual health, dignity, and opportunities for women and girls.",
+      link: "/knowledge-hub/reports"
     },
 
     {
       type: "ARTICLE",
       title: "Why Period Poverty Affects Education",
       text: "Understanding how limited access to menstrual products can impact learning, confidence, and participation.",
-    },
+       link: "/knowledge-hub/articles",
+       },
 
     {
-      type: "STORY",
+      type: "STORIES",
       title: "World Health Day Outreach",
       text: "A closer look at our community health outreach and the people whose lives were touched.",
-    },
+        link: "/knowledge-hub/stories",
+      },
   ];
 
 
@@ -73,9 +77,9 @@ export default function KnowledgeHub() {
             </p>
 
 
-            <button>
-              Read More →
-            </button>
+            <Link href={item.link}>
+  Read More →
+</Link>
 
 
           </article>
