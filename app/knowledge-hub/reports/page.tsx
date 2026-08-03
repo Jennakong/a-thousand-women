@@ -7,19 +7,18 @@ const reports = [
 
   {
     title:
-      "A Thousand Women Impact Report 2025",
+      "The State Of Menstrual Equity in Africa 2026",
 
     date:
-      "2025",
+      "2026",
 
     image:
-      "/images/report-cover.jpg",
+      "/images/eBook-cover.png",
 
     description:
       "An overview of our programmes, community impact and progress supporting women and girls across Africa.",
 
-    link:
-      "#",
+   link: "/knowledge-hub/reports/menstrual-equity-report",
   },
 
 
@@ -28,7 +27,7 @@ const reports = [
       "End Period Poverty Report",
 
     date:
-      "2025",
+      "Coming Soon",
 
     image:
       "/images/period-report.jpg",

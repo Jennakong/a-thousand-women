@@ -4,7 +4,7 @@ export default function KnowledgeHub() {
   const resources = [
     {
       type: "REPORT",
-      title: "State of Menstrual Equity in Africa",
+      title: "The State of Menstrual Equity in Africa",
       text: "Exploring the challenges affecting access to menstrual health, dignity, and opportunities for women and girls.",
       link: "/knowledge-hub/reports"
     },
