@@ -72,9 +72,7 @@ export default function Navbar() {
             Initiatives
           </Link>
 
-          <Link href="/impact" onClick={() => setOpen(false)}>
-            Impact
-          </Link>
+      
 
           <Link href="/knowledge-hub" onClick={() => setOpen(false)}>
             Knowledge Hub
