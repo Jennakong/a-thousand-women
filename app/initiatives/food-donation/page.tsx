@@ -223,7 +223,7 @@ export default function FoodDonationPage() {
           <Reveal>
 
             <Image
-              src="/images/food-community.jpg"
+              src="/images/food-donation-1.jpg"
               alt="Community Food Support"
               width={600}
               height={500}
@@ -266,25 +266,20 @@ export default function FoodDonationPage() {
 
           </p>
 
-          <div
-            className="video-placeholder"
-            style={{
-              padding: "40px",
-            }}
-          >
-
-            <a
-              href="https://www.worldbank.org/en/country/nigeria/overview"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-
-              Read the World Bank Nigeria Poverty Overview →
-
-            </a>
-
-          </div>
-
+         <div
+  className="initiative-source"
+  style={{
+    padding: "40px",
+  }}
+>
+  <a
+    href="https://www.worldbank.org/en/country/nigeria/overview"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Read the World Bank Nigeria Poverty Overview →
+  </a>
+</div>
         </Container>
 
       </section>
@@ -365,7 +360,7 @@ export default function FoodDonationPage() {
             <Reveal>
 
               <Image
-                src="/images/partnership.jpg"
+                src="/images/christmas-giving-3.jpg"
                 alt="Community Partnership"
                 width={600}
                 height={500}

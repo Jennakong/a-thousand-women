@@ -135,7 +135,7 @@ export default function MedicalOutreachPage() {
             <Reveal>
 
               <Image
-                src="/images/medical-outreach.jpg"
+                src="/images/medical-outreach.png"
                 alt="Medical outreach programme"
                 width={600}
                 height={500}
@@ -237,13 +237,14 @@ export default function MedicalOutreachPage() {
             Medical Outreach In Action
           </h2>
 
-          <div className="video-placeholder">
-
-            <p>
-              Outreach documentary or event highlights will appear here.
-            </p>
-
-          </div>
+      <div className="video-placeholder">
+  <iframe
+    src="https://www.youtube.com/embed/d0SxErQeG0"
+    title="A Thousand Women Outreach"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  />
+</div>
 
         </Container>
 
@@ -283,7 +284,7 @@ export default function MedicalOutreachPage() {
           <Reveal>
 
             <Image
-              src="/images/medical-team.jpg"
+              src="/images/medical-outreach.jpg"
               alt="Healthcare volunteers"
               width={600}
               height={500}

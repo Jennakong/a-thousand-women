@@ -249,7 +249,7 @@ export default function EducationalSupportPage() {
                 </p>
 
 
-                <a href="#">
+                <a href="/knowledge-hub/articles/empowering-next-generation" className="initiative-link">
                   Read the full story →
                 </a>
 
@@ -264,7 +264,7 @@ export default function EducationalSupportPage() {
 
               <Image
 
-                src="/images/international-education-day.jpg"
+                src="/images/education-day.jpg"
 
                 alt="International Day of Education outreach"
 
@@ -337,14 +337,14 @@ export default function EducationalSupportPage() {
           </h2>
 
 
-          <div className="video-placeholder">
-
-            <p>
-              Video will be embedded here
-            </p>
-
-          </div>
-
+<div className="video-placeholder">
+  <iframe
+    src="https://www.youtube.com/embed/Qk5WQRueQyQ"
+    title="A Thousand Women Outreach"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  />
+</div>
 
         </Container>
 

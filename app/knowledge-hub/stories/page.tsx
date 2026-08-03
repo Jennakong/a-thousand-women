@@ -14,7 +14,7 @@ const stories = [
       "Health & Community",
 
     image:
-      "/images/world-health-day-outreach.png",
+      "/images/medical-outreach.png",
 
     description:
       "We visited Central Hospital, Ughelli, Delta State, bringing essential supplies, financial support and encouragement to mothers, babies and families while listening to the needs of the hospital community.",
@@ -23,24 +23,24 @@ const stories = [
       "/knowledge-hub/stories/world-health-day",
   },
 
-  {
+ {
     title:
-      "Inspiring Girls to Dream Bigger Through Science",
+      "Christmas Food Donation",
 
     date:
-      "February 11, 2025",
+      "December 2025",
 
     category:
-      "Education & STEM",
+      "Community Stories",
 
     image:
-      "/images/science-girls.jpg",
+      "/images/food-donation.jpeg",
 
     description:
-      "On International Day of Women and Girls in Science, we celebrated curiosity, education and representation by inspiring girls to believe they belong in STEM.",
+      "Supporting families with dignity, care and compassion.",
 
     link:
-      "#",
+      "/knowledge-hub/stories/christmas-food-donation",
   },
 
   {
@@ -57,71 +57,13 @@ const stories = [
       "/images/women-day.jpg",
 
     description:
-      "A celebration honouring the voices, strength and impact of women and girls while exploring the power of intergenerational empowerment.",
+      "A celebration of the women, volunteers and community leaders who make our work possible, honouring their strength, contributions and the generations they continue to inspire.",
 
     link:
-      "#",
+      "/knowledge-hub/stories/international-womens-day",
   },
 
-  {
-    title:
-      "Imagine Life as a Young Girl in Rural Africa",
-
-    date:
-      "Coming Soon",
-
-    category:
-      "Community Stories",
-
-    image:
-      "/images/rural-girls.jpg",
-
-    description:
-      "A closer look at the dreams, challenges and possibilities of girls growing up in rural communities across Africa.",
-
-    link:
-      "#",
-  },
-
-  {
-    title:
-      "Educating Girls, Empowering Futures",
-
-    date:
-      "January 2025",
-
-    category:
-      "Education",
-
-    image:
-      "/images/girls-education.jpeg",
-
-    description:
-      "Through educational support, mentorship and empowerment sessions, we continue sharing stories of girls gaining confidence and opportunities to thrive.",
-
-    link:
-      "#",
-  },
-
-  {
-    title:
-      "Building Dreams Through Creativity",
-
-    date:
-      "Coming Soon",
-
-    category:
-      "Creative Entrepreneurship",
-
-    image:
-      "/images/creative-entrepreneurship.jpg",
-
-    description:
-      "Stories of emerging creatives and entrepreneurs building skills, confidence and sustainable futures through mentorship and support.",
-
-    link:
-      "#",
-  },
+ 
 ];
 export default function StoriesPage() {
   return (
