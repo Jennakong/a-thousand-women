@@ -49,7 +49,6 @@ try {
 return (
 <main className="report-page"> <div className="report-decoration report-decoration-gold"></div> <div className="report-decoration report-decoration-green"></div>
 
-```
   {/* HERO */}
   <section className="report-hero">
     <Container>
