@@ -23,18 +23,18 @@ const articles = [
     description:
       "Exploring how menstrual health access impacts confidence, learning and opportunities.",
     link:
-      "/knowledge-hub/articles",
+      "/knowledge-hub/articles/why-we-started",
   },
 
   {
-    title: "Creating Opportunities For Girls To Thrive",
+    title: "Building Communities Through Education",
     date: "August 03, 2026",
     author: "Jennifer Akong.",
     image: "/images/girls-education.jpeg",
     description:
-      "Stories and reflections from our education initiatives.",
+      "Exploring how access to education creates opportunities for women and girls.",
     link:
-      "/knowledge-hub/articles",
+      "/knowledge-hub/articles/building-communities-through-education",
   },
 ];
 
@@ -59,11 +59,11 @@ const stories = [
     title: "World Health Day Medical Outreach",
     date: "April 2025",
     author: "A Thousand Women",
-    image: "/images/medical-outreach.jpeg",
+    image: "/images/medical-outreach.png",
     description:
       "Bringing essential healthcare support closer to communities.",
     link:
-      "/knowledge-hub/stories",
+      "/knowledge-hub/stories/world-health-day",
   },
 
   {
@@ -74,7 +74,7 @@ const stories = [
     description:
       "Supporting families with dignity, care and compassion.",
     link:
-      "/knowledge-hub/stories",
+      "/knowledge-hub/stories/christmas-food-donation",
   },
 
  
