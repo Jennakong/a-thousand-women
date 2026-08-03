@@ -123,3 +123,71 @@ const stories = [
       "#",
   },
 ];
+export default function StoriesPage() {
+  return (
+    <main className="stories-page">
+      <Container>
+
+        <section className="stories-hero">
+          <span className="section-label">
+            STORIES
+          </span>
+
+          <h1>
+            Voices, Journeys
+            <br />
+            and Impact
+          </h1>
+
+          <p>
+            Discover stories from our community,
+            celebrating the experiences, achievements
+            and journeys of women and girls across Africa.
+          </p>
+        </section>
+
+        <section className="stories-grid">
+
+          {stories.map((story) => (
+            <article
+              key={story.title}
+              className="story-card"
+            >
+
+              <div className="story-thumbnail">
+                <Image
+                  src={story.image}
+                  alt={story.title}
+                  fill
+                />
+              </div>
+
+              <div className="story-card-content">
+
+                <p className="story-meta">
+                  {story.date} · {story.category}
+                </p>
+
+                <h2>
+                  {story.title}
+                </h2>
+
+                <p>
+                  {story.description}
+                </p>
+
+                <Link href={story.link}>
+                  Read Story →
+                </Link>
+
+              </div>
+
+            </article>
+          ))}
+
+        </section>
+
+      </Container>
+    </main>
+  );
+}
