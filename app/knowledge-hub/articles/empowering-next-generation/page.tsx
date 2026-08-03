@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Container from "@/components/layout/Container";
 import ContactForm from "@/components/forms/ContactForm";
+import "../article.css";
 
 export default function EmpoweringNextGenerationPage() {
 

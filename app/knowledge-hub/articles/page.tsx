@@ -15,7 +15,7 @@ const articles = [
       "Jennifer A.",
 
     image:
-      "/images/blog-banner.png",
+      "/images/education-day.jpg",
 
     description:
       "A day of learning, menstrual health education, empowerment talks and educational support as we celebrate the next generation.",
@@ -36,13 +36,13 @@ const articles = [
       "Jennifer A.",
 
     image:
-      "/images/atw-children.jpg",
+      "/images/future-is-female.jpg",
 
     description:
       "After a deep reflection and an important conversation within our team, we realized that too many young girls in Africa are struggling with the bare minimum to thrive.",
 
     link:
-      "#",
+      "/knowledge-hub/articles/why-we-started",
   },
 
 
@@ -51,7 +51,7 @@ const articles = [
       "Building Communities Through Education",
 
     date:
-      "Coming Soon",
+      "August 03, 2026",
 
     author:
       "A Thousand Women",
@@ -63,7 +63,7 @@ const articles = [
       "Exploring how access to education creates opportunities for women and girls.",
 
     link:
-      "#",
+      "/knowledge-hub/articles/building-communities-through-education",
   },
 
 ];

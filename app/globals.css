@@ -7171,3 +7171,25 @@ margin-bottom: 25px;
   top: 850px;
   left: -170px;
 }
+.knowledge-main-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  background: var(--atw-green);
+  color: var(--atw-white);
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.knowledge-main-button:hover {
+  background: var(--atw-gold);
+  color: var(--atw-green);
+  transform: translateY(-2px);
+}
+.knowledge-footer {
+  margin-top: 40px;
+  text-align: center;
+}

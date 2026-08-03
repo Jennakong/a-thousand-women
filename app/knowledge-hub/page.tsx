@@ -8,7 +8,7 @@ const articles = [
     title: "Empowering the Next Generation: International Day of Education",
     date: "January 17, 2025",
     author: "Jennifer A.",
-    image: "/images/blog-banner.png",
+    image: "/images/education-day.jpg",
     description:
       "Celebrating education, empowerment and menstrual health awareness through our school outreach programme.",
     link:
@@ -28,8 +28,8 @@ const articles = [
 
   {
     title: "Creating Opportunities For Girls To Thrive",
-    date: "Coming Soon",
-    author: "A Thousand Women",
+    date: "August 03, 2026",
+    author: "Jennifer Akong.",
     image: "/images/girls-education.jpeg",
     description:
       "Stories and reflections from our education initiatives.",

@@ -1,32 +1,34 @@
-import Link from "next/link";
-export default function KnowledgeHub() {
 
+import Link from "next/link";
+
+export default function KnowledgeHub() {
   const resources = [
     {
-      type: "REPORT",
-      title: "The State of Menstrual Equity in Africa",
-      text: "Exploring the challenges affecting access to menstrual health, dignity, and opportunities for women and girls.",
-      link: "/knowledge-hub/reports"
+      type: "REPORTS",
+      title: "Research & Reports",
+      text: "Explore research, data and evidence examining the issues affecting women and girls across Africa, from menstrual equity to education, health and opportunity.",
+      link: "/knowledge-hub/reports",
+      action: "Explore Reports →",
     },
 
     {
-      type: "ARTICLE",
-      title: "Why Period Poverty Affects Education",
-      text: "Understanding how limited access to menstrual products can impact learning, confidence, and participation.",
-       link: "/knowledge-hub/articles",
-       },
+      type: "ARTICLES",
+      title: "Ideas & Insights",
+      text: "Read thoughtful articles exploring women's empowerment, education, menstrual health, gender equity and the social issues shaping the lives of women and girls.",
+      link: "/knowledge-hub/articles",
+      action: "Explore Articles →",
+    },
 
     {
       type: "STORIES",
-      title: "World Health Day Outreach",
-      text: "A closer look at our community health outreach and the people whose lives were touched.",
-        link: "/knowledge-hub/stories",
-      },
+      title: "Stories & Impact",
+      text: "Go behind the scenes of A Thousand Women's work and discover the people, communities and moments that continue to shape our mission.",
+      link: "/knowledge-hub/stories",
+      action: "Explore Stories →",
+    },
   ];
 
-
   return (
-
     <section className="knowledge-section">
 
       <div className="knowledge-heading">
@@ -35,23 +37,19 @@ export default function KnowledgeHub() {
           KNOWLEDGE HUB
         </span>
 
-
         <h2>
           Knowledge That
+          <br />
           Inspires Change
         </h2>
 
-
         <p>
-          Research, stories, and insights exploring
-          the challenges, voices, and solutions
-          shaping the future of women and girls.
+          Research, ideas and stories exploring the
+          realities, challenges and possibilities shaping
+          the future of women and girls.
         </p>
 
-
       </div>
-
-
 
       <div className="knowledge-grid">
 
@@ -66,21 +64,17 @@ export default function KnowledgeHub() {
               {item.type}
             </span>
 
-
             <h3>
               {item.title}
             </h3>
-
 
             <p>
               {item.text}
             </p>
 
-
             <Link href={item.link}>
-  Read More →
-</Link>
-
+              {item.action}
+            </Link>
 
           </article>
 
@@ -88,8 +82,17 @@ export default function KnowledgeHub() {
 
       </div>
 
+      <div className="knowledge-footer">
+
+        <Link
+          href="/knowledge-hub"
+          className="knowledge-main-button"
+        >
+          Explore Knowledge Hub →
+        </Link>
+
+      </div>
 
     </section>
-
   );
 }
