@@ -17,7 +17,7 @@ export default function Navbar() {
 
           <Image
             src="/images/atwlogo.png"
-            alt="A Thousand Women logo"
+            alt="A Thousand Women"
             width={300}
             height={120}
             priority
