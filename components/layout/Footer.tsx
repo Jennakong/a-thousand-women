@@ -11,7 +11,7 @@ export default function Footer() {
 
           <Image
             src="/images/atwlogo-white.png"
-            alt="A Thousand Women logo"
+            alt="A Thousand Women"
             width={240}
             height={100}
           />
