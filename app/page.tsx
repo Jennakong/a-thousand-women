@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 import Hero from "@/components/sections/Hero";
 import Mission from "@/components/sections/Mission";
 import WhyATW from "@/components/sections/WhyATW";

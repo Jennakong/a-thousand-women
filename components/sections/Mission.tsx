@@ -27,19 +27,20 @@ export default function Mission() {
                 Transforming Communities.
               </h2>
 
-              <p className="mission-text">
-                A Thousand Women is a nonprofit organisation committed
-                to empowering women and girls across Africa through
-                education, menstrual equity, advocacy, healthcare,
-                and community support.
-              </p>
+    <p className="mission-text">
+  A Thousand Women is a nonprofit organisation committed to
+  empowering women and girls across Africa through education,
+  women's health education, menstrual equity, advocacy,
+  healthcare, and community support.
+</p>
 
-              <p className="mission-text">
-                We believe every woman and girl deserves the opportunity
-                to learn, grow and lead. By creating access to knowledge,
-                essential resources and opportunities, we are building
-                stronger communities and empowering generations to come.
-              </p>
+<p className="mission-text">
+  We believe every woman and girl deserves access to the knowledge,
+  resources and opportunities she needs to learn, grow and lead.
+  Through accessible health education, community-led programmes
+  and practical solutions, we work to address barriers that affect
+  women's wellbeing and participation in everyday life.
+</p>
 
             </div>
 
