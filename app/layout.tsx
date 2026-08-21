@@ -20,8 +20,17 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
+  title: "A Thousand Women | Women's Health & Empowerment in Africa",
   description:
-    "Empowering women and girls through education, empowerment, and advocacy.",
+    "A Thousand Women empowers women and girls across Africa through women's health education, menstrual equity, advocacy and community-led solutions.",
+  keywords: [
+    "women's health education in developing countries",
+    "women's health in Africa",
+    "menstrual health education",
+    "menstrual equity in Africa",
+    "period poverty in Africa",
+    "women and girls empowerment Africa",
+  ],
 };
 
 export default function RootLayout({
